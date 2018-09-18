@@ -1,0 +1,12 @@
+wethinkcode/fixme/router/server/IDGenerator.class
+wethinkcode/fixme/router/routing/RoutingTable.class
+wethinkcode/fixme/router/server/Validation/FixMessageValidator.class
+wethinkcode/fixme/router/routing/Router.class
+wethinkcode/fixme/router/server/Validation/MessageValidationHandler.class
+wethinkcode/fixme/router/tests/Client.class
+wethinkcode/fixme/router/server/Validation/MessageForwarding.class
+wethinkcode/fixme/router/server/Validation/CheckSumValidator.class
+wethinkcode/fixme/router/tests/test.class
+wethinkcode/fixme/router/server/Server.class
+wethinkcode/fixme/router/server/Validation/DestinationVerification.class
+wethinkcode/fixme/router/myServer.class
