@@ -20,7 +20,7 @@ public class WriteToFile {
     public static void createFile(){
         try{
             if (file == null){
-                file = new File("swingy.txt");
+                file = new File("wallet.txt");
                 file.createNewFile();
             }
 

@@ -191,8 +191,10 @@ public class Market {
                 new Commodity("Gold", 78976.0, 1208.0),
                 new Commodity("Silver", 78565353.0, 909.0) ,
                 new Commodity("Platinum", 74763.0, 1889.0));
-//        WriteToFile.writeToFile("YayYay Gold 78976.0 1208.0 Silver 78565353.0 909.0 Platinum 74763.0 1889.0");
-//        WriteToFile.closeFile();
+
+        WriteToFile.createFile();
+        WriteToFile.closeFile();
+
         try {
             market.startClient();
         }

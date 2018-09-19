@@ -1,5 +1,8 @@
 package wethinkcode.fixme.broker.Client;
 
+import wethinkcode.fixme.broker.Broker;
+import wethinkcode.fixme.broker.BrokerPrint;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,6 +13,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
+import java.util.Scanner;
 import java.util.Set;
 
 public class BrokerClient {
@@ -21,6 +25,10 @@ public class BrokerClient {
     private  String messages;
     private BufferedReader bufferedReader;
     private String clientID;
+    private static String market;
+    private static String instrument;
+    private static int quantity;
+    private static int buysell;
 
 
     public BrokerClient() {
@@ -29,11 +37,12 @@ public class BrokerClient {
             this.hostAddress = new InetSocketAddress("localhost", 5000);
             this.client = SocketChannel.open(this.hostAddress);
             this.client.configureBlocking(false);
-            System.out.println(this.client.getLocalAddress().toString());
             int operations = SelectionKey.OP_CONNECT | SelectionKey.OP_READ;
             this.client.register(this.selector, operations);
             this.bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             this.buffer = ByteBuffer.allocate(1024);
+
+            //TODO make sure to add whatever is bought to the wallet/assets
         }
         catch (IOException e) {
             System.out.println("Error: A problem occurred whilst initializing the client");
@@ -48,7 +57,7 @@ public class BrokerClient {
 
     public void startClient() throws Exception {
 
-        System.out.println("< Broker started >");
+        System.out.println("< BROKER STARTED >\n");
         while (true){
             if (this.selector.select() == 0)
                 continue;
@@ -79,7 +88,7 @@ public class BrokerClient {
     private void read () throws  Exception {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
-        System.out.println("response=" + messages);
+        System.out.println("BrokerID = " + messages);
         buffer.clear();
         this.client.register(this.selector, SelectionKey.OP_READ);
     }
@@ -124,5 +133,43 @@ public class BrokerClient {
             channel.finishConnect();
         }
         return true;
+    }
+
+    public static void main(String[] args){
+        BrokerPrint.buyOrSell();
+
+        buysell = Broker.setBuyOrSell();
+        if (buysell == 1){
+            BrokerPrint.startUpMessage();
+            market = Broker.setMarket();
+            BrokerPrint.marketContentsMessage();
+            instrument = Broker.setInstrument();
+            BrokerPrint.instrumentQuantity();
+            quantity = Broker.setQuantity();
+        }
+        else if (buysell == 2){
+            BrokerPrint.showAssets();
+        }
+        System.out.println("\n\nYour purchase request sending as FIX message\n" +
+                "1. Continue purchase\n" +
+                "2. Quit purchasing\n\n");
+
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNextLine()){
+            int option = scanner.nextInt();
+            if (option == 1) {
+                BrokerClient client = new BrokerClient();
+                try {
+                    client.startClient();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            else if (option == 2){
+                System.out.println("----- GOODBYE -----\n");
+                System.exit(0);
+            }
+        }
+        scanner.close();
     }
 }

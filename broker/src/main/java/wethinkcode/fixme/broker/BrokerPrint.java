@@ -1,5 +1,7 @@
 package wethinkcode.fixme.broker;
 
+import wethinkcode.fixme.broker.FileHandle.ReadFile;
+
 public class BrokerPrint {
 
     public static void startUpMessage(){
@@ -36,7 +38,7 @@ public class BrokerPrint {
             System.out.print("Enter Input: ");
     }
 
-    public static void priceEnquiry(){
+    public static void instrumentQuantity(){
         System.out.println("/*************************************************************************/");
         System.out.println("/*************************************************************************/");
         System.out.println("/*                                                                       */");
@@ -69,5 +71,17 @@ public class BrokerPrint {
         System.out.println("/*************************************************************************/\n");
 
         System.out.print("Enter Input: ");
+    }
+
+    public static void showAssets(){
+//        String[] items = new String[ReadFile.getLinesCount()];
+        String[] items = ReadFile.ReadLine();
+
+        System.out.println("*************** SELL ASSETS ***************\n" +
+        "The assets available to sell in your wallet are:\n\n");
+
+        for (String item : items){
+            System.out.println("*" + item.split(" ")[0] + " " + item.split(" ")[1] + " units\n");
+        }
     }
 }

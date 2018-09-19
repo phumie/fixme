@@ -12,19 +12,22 @@ public class Broker {
     private static int quantity;
     private static int buyOrSell;
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
-        BrokerPrint.buyOrSell();
-        setBuyOrSell();
-        BrokerPrint.startUpMessage();
-        setMarket();
-//        System.out.println(market);
-        BrokerPrint.marketContentsMessage();
-        setInstrument();
-//        System.out.println(instrument);
-        BrokerPrint.priceEnquiry();
-        setPrice();
-//        System.out.println(price);
+//        BrokerPrint.buyOrSell();
+//        setBuyOrSell();
+//
+//        if (buyOrSell == 1){
+//            BrokerPrint.startUpMessage();
+//            setMarket();
+//            BrokerPrint.marketContentsMessage();
+//            setInstrument();
+//            BrokerPrint.priceEnquiry();
+//            setPrice();
+//        }
+//        else if (buyOrSell == 2){
+//            BrokerPrint.showAssets();
+//        }
 
 
 //        BrokerClient client = new BrokerClient();
@@ -35,20 +38,21 @@ public class Broker {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-    }
+//    }
 
-    private static void setPrice(){
+    public static int setQuantity(){
 
         try {
             Scanner sc = new Scanner(System.in);
             quantity = sc.nextInt();
         }catch (Exception e){
             System.out.println("Error: Invalid Input, Please enter valid price.");
-            setPrice();
+            setQuantity();
         }
+        return quantity;
     }
 
-    private static void setInstrument(){
+    public static String setInstrument(){
 
         try {
             Scanner scanner = new Scanner(System.in);
@@ -74,9 +78,10 @@ public class Broker {
             System.out.println("Error: Invalid Input, Please enter valid Instrument Code.");
             setInstrument();
         }
+        return instrument;
     }
 
-    private static void setMarket(){
+    public static String setMarket(){
         try {
             Scanner sc = new Scanner(System.in);
 
@@ -98,9 +103,10 @@ public class Broker {
             System.out.println("Error: Invalid Input, Please enter valid corresponding market Index.");
             setMarket();
         }
+        return market;
     }
 
-    private static void setBuyOrSell(){
+    public static int setBuyOrSell(){
         try {
             Scanner sc = new Scanner(System.in);
 
@@ -120,5 +126,7 @@ public class Broker {
         if (buyOrSell == 2){
             //TODO: CREATE A WALLET AND SEND THROUGH DETAILS SO WE CAN CONSTRUCT A SELL FIX MESSAGE.
         }
+        return buyOrSell;
     }
+
 }
