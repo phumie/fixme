@@ -12,34 +12,6 @@ public class Broker {
     private static int quantity;
     private static int buyOrSell;
 
-//    public static void main(String[] args) {
-
-//        BrokerPrint.buyOrSell();
-//        setBuyOrSell();
-//
-//        if (buyOrSell == 1){
-//            BrokerPrint.startUpMessage();
-//            setMarket();
-//            BrokerPrint.marketContentsMessage();
-//            setInstrument();
-//            BrokerPrint.priceEnquiry();
-//            setPrice();
-//        }
-//        else if (buyOrSell == 2){
-//            BrokerPrint.showAssets();
-//        }
-
-
-//        BrokerClient client = new BrokerClient();
-//        try {
-//            client.startClient();
-//        } catch (IOException e ) {
-//            e.printStackTrace();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public static int setQuantity(){
 
         try {

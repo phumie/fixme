@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88f3530b-25e8-479a-945c-6bed5af4fc68" name="Default" comment="Sell comodity function required">
-      <change afterPath="$PROJECT_DIR$/assets.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java" afterDir="false" />
+    <list default="true" id="88f3530b-25e8-479a-945c-6bed5af4fc68" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Broker.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Broker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Server.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/tests/Client.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/BrokerPrint.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/BrokerPrint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Client/BrokerClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Client/BrokerClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/routing/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/routing/Router.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/broker/target/" />
     <ignored path="$PROJECT_DIR$/router/target/" />
@@ -33,20 +28,8 @@
       <file leaf-file-name="Router.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Market.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="195" column="32" selection-start-line="195" selection-start-column="32" selection-end-line="195" selection-end-column="32" />
+            <state relative-caret-position="435">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,8 +40,8 @@
       <file leaf-file-name="BrokerClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
-              <caret line="168" column="39" lean-forward="true" selection-start-line="168" selection-start-column="39" selection-end-line="168" selection-end-column="39" />
+            <state relative-caret-position="463">
+              <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,32 +49,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FixMessageFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java">
+      <file leaf-file-name="CheckSumValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state relative-caret-position="585">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Broker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-737">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrokerPrint.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="2010">
+              <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -127,10 +98,10 @@
         <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" />
         <option value="$PROJECT_DIR$/wallet.txt" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java" />
-        <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java" />
-        <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java" />
+        <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" />
+        <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" />
       </list>
     </option>
   </component>
@@ -150,7 +121,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1920" />
+    <option name="width" value="1463" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -159,7 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,57 +138,12 @@
               <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="fix-me" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="broker" type="462c0819:PsiDirectoryNode" />
-              <item name="FixMessage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,75 +308,85 @@
       <workItem from="1537196223617" duration="203000" />
       <workItem from="1537256895373" duration="11063000" />
       <workItem from="1537280074300" duration="100000" />
-      <workItem from="1537343061384" duration="7368000" />
+      <workItem from="1537343061384" duration="7557000" />
+      <workItem from="1537430204283" duration="5936000" />
+      <workItem from="1537443543552" duration="1143000" />
     </task>
+    <task id="LOCAL-00001" summary="Sell comodity function required">
+      <created>1537368156255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537368156255</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45859000" />
+    <option name="totallyTimeSpent" value="53127000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1130" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1463" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.29054725" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32976654" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32998455" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34129354" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42189056" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32935324" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29227942" />
-      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3145672" />
+      <window_info anchor="right" id="Bean Validation" order="3" weight="0.32985657" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.29054725" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.42189056" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.29054725" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29067641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Bean Validation" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935324" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32976654" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32976654" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.29054725" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.32998455" />
       <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
@@ -717,20 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
-          <caret line="125" column="15" lean-forward="true" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/HandleFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -752,30 +674,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WriteToFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WriteToFile.java" />
     <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sources.txt" />
     <entry file="file://$PROJECT_DIR$/assets.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -797,64 +704,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="195" column="32" selection-start-line="195" selection-start-column="32" selection-end-line="195" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="262">
+          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="195" column="32" selection-start-line="195" selection-start-column="32" selection-end-line="195" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-737">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="-512">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java">
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="2010">
+          <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="168" column="39" lean-forward="true" selection-start-line="168" selection-start-column="39" selection-end-line="168" selection-end-column="39" />
+        <state relative-caret-position="463">
+          <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

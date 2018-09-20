@@ -2,12 +2,14 @@ package wethinkcode.fixme.broker.Client;
 
 import wethinkcode.fixme.broker.Broker;
 import wethinkcode.fixme.broker.BrokerPrint;
+import wethinkcode.fixme.broker.FixMessage.FixMessageFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.channels.ClosedChannelException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
@@ -18,17 +20,20 @@ import java.util.Set;
 
 public class BrokerClient {
 
-    private Selector selector;
+    private static Selector selector;
     private InetSocketAddress hostAddress;
-    private SocketChannel client;
+    private static SocketChannel client;
     private ByteBuffer buffer;
     private  String messages;
+    private static String fixMessage;
     private BufferedReader bufferedReader;
-    private String clientID;
+    private static String clientID;
     private static String market;
     private static String instrument;
+    private static double price;
     private static int quantity;
     private static int buysell;
+    private static int flag;
 
 
     public BrokerClient() {
@@ -57,12 +62,14 @@ public class BrokerClient {
 
     public void startClient() throws Exception {
 
-        System.out.println("< BROKER STARTED >\n");
+        System.out.println("----- BROKER STARTED -----\n");
         while (true){
             if (this.selector.select() == 0)
                 continue;
             Set<SelectionKey> selectionKeys = this.selector.selectedKeys();
             Iterator<SelectionKey> iterator = selectionKeys.iterator();
+            fixMessageGen();
+
             while (iterator.hasNext()) {
                 SelectionKey key = iterator.next();
                 iterator.remove();
@@ -89,20 +96,20 @@ public class BrokerClient {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
         System.out.println("BrokerID = " + messages);
+        clientID = messages;
+        client.register(selector, SelectionKey.OP_READ);
+//        System.out.println(fixMessage);
         buffer.clear();
-        this.client.register(this.selector, SelectionKey.OP_READ);
+        this.client.register(this.selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE );
     }
 
 
     public void writeToClient() throws Exception {
-        messages = bufferedReader.readLine();
-        messages = "B00001|8=FIX.4.4|9=43|35=1|49=B00001|56=M00002|55=NQS|44=300|38=3";
-        messages = messages + "|10=" + checkSumCalculator(messages);
         this.buffer = ByteBuffer.allocate(1024);
-        this.buffer.put(messages.getBytes());
+        this.buffer.put(fixMessage.getBytes());
         this.buffer.flip();
         client.write(this.buffer);
-        System.out.println(" " + messages);
+        System.out.println(" " + fixMessage);
         this.buffer.clear();
         this.client.register(this.selector, SelectionKey.OP_READ);
     }
@@ -135,6 +142,12 @@ public class BrokerClient {
         return true;
     }
 
+    public void fixMessageGen() throws Exception {
+        fixMessage = FixMessageFactory.fixMessage(clientID, buysell, market, instrument, price, quantity);
+        fixMessage = fixMessage + "10=" + checkSumCalculator(fixMessage);
+        client.register(selector, SelectionKey.OP_READ);
+    }
+
     public static void main(String[] args){
         BrokerPrint.buyOrSell();
 
@@ -146,6 +159,13 @@ public class BrokerClient {
             instrument = Broker.setInstrument();
             BrokerPrint.instrumentQuantity();
             quantity = Broker.setQuantity();
+
+            if (instrument.equals("Gold"))
+                price = 1208.0 * quantity;
+            else if (instrument.equals("Silver"))
+                price = 909.0 * quantity;
+            else if (instrument.equals("Platinum"))
+                price = 1889.0 * quantity;
         }
         else if (buysell == 2){
             BrokerPrint.showAssets();
@@ -158,7 +178,10 @@ public class BrokerClient {
         while (scanner.hasNextLine()){
             int option = scanner.nextInt();
             if (option == 1) {
+                System.out.println("**********************************************\n");
+                System.out.println("Fix message generated.\n");
                 BrokerClient client = new BrokerClient();
+
                 try {
                     client.startClient();
                 } catch (Exception e) {
