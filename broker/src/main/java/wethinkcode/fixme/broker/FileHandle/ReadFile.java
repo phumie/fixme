@@ -11,9 +11,9 @@ import java.lang.*;
 
 public class ReadFile {
 
-	public static int getLinesCount(){
+	public static int getLinesCount(String filename){
 		try{
-			File file = new File("assets.txt");
+			File file = new File(filename);
 			FileReader fReader = new FileReader(file);
 			LineNumberReader lReader = new LineNumberReader(fReader);
 			lReader.skip(Long.MAX_VALUE);
@@ -26,13 +26,13 @@ public class ReadFile {
 		}
 		return -1;
 	}
-	public static String[] ReadLine(){
+	public static String[] ReadLine(String filename){
 		try{
-			File file = new File("assets.txt");
+			File file = new File(filename);
 			FileReader fReader = new FileReader(file);
 			BufferedReader bReader = new BufferedReader(fReader);
 			String line = null;
-			String items[] = new String[getLinesCount() + 1];
+			String items[] = new String[getLinesCount(filename) + 1];
 			int index = 0;
 
 			while ((line = bReader.readLine()) != null){
@@ -49,9 +49,9 @@ public class ReadFile {
 	}
 
 
-	public static void updateFile(String instrument){
+	public static void updateFile(String instrument, String filename){
 		try{	
-			String[] items = ReadLine();
+			String[] items = ReadLine(filename);
 			String deleteLine = null;
 			String newLine = null;
 			File file = new File("assets.txt");

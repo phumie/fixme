@@ -5,77 +5,46 @@ import wethinkcode.fixme.broker.FileHandle.ReadFile;
 public class BrokerPrint {
 
     public static void startUpMessage(){
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*        Welcome to your Broker. The market avaible to trade            */");
-        System.out.println("/*                   in is YayYay.                                       */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*        1. Continue                                                    */");
-        System.out.println("/*        2. Exit                                                        */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*************************************************************************/\n");
-
-        System.out.print("Enter Input: ");
+        System.out.println("********** BROKER **********\n\n" +
+                "The market available to trade in is YayYay. Select option to continue.\n\n" +
+                "1. Continue\n" +
+                "2. Exit\n\n" +
+                "Enter Input: ");
     }
 
     public static void marketContentsMessage(){
-            System.out.println("/*************************************************************************/");
-            System.out.println("/*************************************************************************/");
-            System.out.println("/*                                                                       */");
-            System.out.println("/*        YayYay currently contains the following Instruments,           */");
-            System.out.println("/*                Select the one you would like to trade in.             */");
-            System.out.println("/*                                                                       */");
-            System.out.println("/*     1. Gold         78976.0 units / R1208.00 each                     */");
-            System.out.println("/*     2. Silver       78565353.0 units / R909.00 each                   */");
-            System.out.println("/*     3. Platinum     74763.0 units / R1889.00 each                     */");
-            System.out.println("/*                                                                       */");
-            System.out.println("/*************************************************************************/");
-            System.out.println("/*************************************************************************/\n");
+        String[] markets = ReadFile.ReadLine("source.txt");
+        String line = markets[0];
+        String[] items = line.split(",");
 
-            System.out.print("Enter Input: ");
+        System.out.println("********** BROKER **********\n\n" +
+                "YayYay currently contains the following Instruments.\n" +
+                "Select the one you would like to buy.\n\n" +
+                "1. " + items[1] + "\n" +
+                "2. " + items[2] + "\n" +
+                "1. " + items[3] + "\n\n" +
+                "Enter Input: ");
     }
 
     public static void instrumentQuantity(){
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*              Please enter valid quantity of the instrument            */");
-        System.out.println("/*                     that you wish to purchase.                        */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*           ____________________________________________                */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*************************************************************************/\n");
-
-        System.out.print("Enter Input: ");
+        System.out.println("********** BROKER **********\n\n" +
+                "Please enter a valid quantity of the instrument that\n" +
+                "you wish to purchase.\n\n" +
+                "Enter Input: ");
     }
 
 
     public static void buyOrSell(){
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*              Would you Like to purchase an instrument or              */");
-        System.out.println("/*                   Sell an existing instrument that's                  */");
-        System.out.println("/*                         currently in your wallet?                     */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*           1. BUY                                                      */");
-        System.out.println("/*           2. SELL                                                     */");
-        System.out.println("/*                                                                       */");
-        System.out.println("/*************************************************************************/");
-        System.out.println("/*************************************************************************/\n");
-
-        System.out.print("Enter Input: ");
+        System.out.println("********** WELCOME TO BROKER **********\n\n" +
+                "Would you like to purchase an instrument or purchase\n" +
+                "an instrument that is already in your assets wallet?\n\n" +
+                "1. BUY\n" +
+                "2. SELL\n\n" +
+                "Enter Input: ");
     }
 
     public static void showAssets(){
-//        String[] items = new String[ReadFile.getLinesCount()];
-        String[] items = ReadFile.ReadLine();
+        String[] items = ReadFile.ReadLine("assets.txt");
 
         System.out.println("*************** SELL ASSETS ***************\n" +
         "The assets available to sell in your wallet are:\n\n");

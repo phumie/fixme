@@ -13,7 +13,9 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -29,6 +31,8 @@ public class Market {
     private BufferedReader bufferedReader;
     private boolean idFlag;
     private String clientID;
+    private Calendar cal = Calendar.getInstance();
+    private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
     public Market(String name, Commodity stock1, Commodity stock2, Commodity stock3) {
         this.name = name;
@@ -74,7 +78,11 @@ public class Market {
      */
 
     public void startClient() throws Exception {
-    System.out.println("< Market started >");
+
+
+        System.out.println("----- MARKET STARTED -----\n");
+        System.out.println(sdf.format(cal.getTime()) + " [MARKET]: Connected to Router");
+
         while (true){
             if (this.selector.select() == 0)
                 continue;
@@ -123,7 +131,7 @@ public class Market {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
 
-        System.out.println("Market message:" + messages);
+        System.out.println(sdf.format(cal.getTime()) + " [MARKET]: MarketID -> "+ messages);
         if (!this.idFlag){
             this.clientID = messages;
             this.client.register(this.selector, SelectionKey.OP_READ);
@@ -171,12 +179,12 @@ public class Market {
      */
 
     private void writeToClient() throws Exception {
-        messages = bufferedReader.readLine();
+//        messages = bufferedReader.readLine();
         this.buffer = ByteBuffer.allocate(1024);
         this.buffer.put(messages.getBytes());
         this.buffer.flip();
         client.write(this.buffer);
-        System.out.println("Checking message: " + messages);
+//        System.out.println("Checking message: " + messages);
         this.buffer.clear();
         this.client.register(this.selector, SelectionKey.OP_READ);
     }
@@ -191,10 +199,6 @@ public class Market {
                 new Commodity("Gold", 78976.0, 1208.0),
                 new Commodity("Silver", 78565353.0, 909.0) ,
                 new Commodity("Platinum", 74763.0, 1889.0));
-
-        WriteToFile.createFile();
-        WriteToFile.closeFile();
-
         try {
             market.startClient();
         }

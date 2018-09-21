@@ -13,6 +13,8 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -24,6 +26,8 @@ public class Server {
 //    private final int port;
     private ByteBuffer buffer;
     private ServerSocketChannel serverChannel;
+    private Calendar cal = Calendar.getInstance();
+    private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
     /**
      * Initializing the server
@@ -44,6 +48,7 @@ public class Server {
 
         System.out.println("---------- SERVER STARTED ----------\n");
 
+
         int[] ports = {5000, 5001};
 
         for (int port : ports) {
@@ -53,10 +58,10 @@ public class Server {
             server.socket().bind(new InetSocketAddress(port));
             server.register(selector, SelectionKey.OP_ACCEPT);
             if (port == 5001){
-                System.out.println("Listening for market on port 5001");
+                System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Listening for market on port 5001");
             }
             else if (port == 5000){
-                System.out.println("Listening for broker on port 5000");
+                System.out.println(sdf.format(cal.getTime()) +" [SERVER]: Listening for broker on port 5000");
             }
         }
 
@@ -75,7 +80,9 @@ public class Server {
                 if (key.isValid() && key.isReadable())
                     this.read(key, routingTables);
 //                if (key.isValid() && key.isWritable())
-//                    this.writeToClient(key, "BOOM. ITS ACTUALLY WORKING!");
+//                    this.useSocketToWrite();
+//                    this.writeToClient(key, "Message accepted by Router");
+//                    continue;
             }
         }
     }
@@ -95,11 +102,11 @@ public class Server {
         channel.configureBlocking(false);
         Socket socket = channel.socket();
         SocketAddress remoteAddr = socket.getRemoteSocketAddress();
-        System.out.println("Connected to: " + remoteAddr);
-        System.out.println("Listen from port : " + socket.getLocalPort());
+        System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Listen from port " + socket.getLocalPort());
         String clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
         routingTables.add(new RoutingTable( clientId, channel));
         this.useSocketToWrite(channel, clientId);
+//        System.out.println("Client in router table: " + clientId);
     }
 
     /**
@@ -133,14 +140,14 @@ public class Server {
         SocketChannel marketChannel = validation(msg, routingTable);
         if (marketChannel == null) {
             //TODO: send back broker an error message
-            System.out.println("Need to send the client an error message");
+//            System.out.println("Need to send the client an error message");
         } else {
             //TODO: send the market the message from the broker
             System.out.println("valid message");
             this.useSocketToWrite(marketChannel, msg);
         }
 
-        System.out.println("Got: " + msg);
+        System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Got " + msg);
         channel.register(this.selector, SelectionKey.OP_WRITE);
     }
 
@@ -170,7 +177,6 @@ public class Server {
      */
 
     private void useSocketToWrite (SocketChannel channel, String message) throws Exception {
-
         this.buffer = ByteBuffer.allocate(1024);
         this.buffer.put(message.getBytes());
         this.buffer.flip();
@@ -192,4 +198,6 @@ public class Server {
         SocketChannel channel = (SocketChannel)key.channel();
         this.useSocketToWrite(channel, message);
     }
+
+
 }

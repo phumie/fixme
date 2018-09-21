@@ -14,6 +14,8 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
@@ -34,6 +36,8 @@ public class BrokerClient {
     private static int quantity;
     private static int buysell;
     private static int flag;
+    private static Calendar cal = Calendar.getInstance();
+    private static SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
 
     public BrokerClient() {
@@ -61,8 +65,9 @@ public class BrokerClient {
     }
 
     public void startClient() throws Exception {
-
         System.out.println("----- BROKER STARTED -----\n");
+        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Connected to Router");
+
         while (true){
             if (this.selector.select() == 0)
                 continue;
@@ -95,7 +100,7 @@ public class BrokerClient {
     private void read () throws  Exception {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
-        System.out.println("BrokerID = " + messages);
+        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BrokerID -> " + messages);
         clientID = messages;
         client.register(selector, SelectionKey.OP_READ);
 //        System.out.println(fixMessage);
@@ -109,9 +114,10 @@ public class BrokerClient {
         this.buffer.put(fixMessage.getBytes());
         this.buffer.flip();
         client.write(this.buffer);
-        System.out.println(" " + fixMessage);
+        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message Generated -> " + fixMessage);
         this.buffer.clear();
         this.client.register(this.selector, SelectionKey.OP_READ);
+        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message sent to Router for Market");
     }
 
     private String checkSumCalculator(String message){
@@ -178,8 +184,6 @@ public class BrokerClient {
         while (scanner.hasNextLine()){
             int option = scanner.nextInt();
             if (option == 1) {
-                System.out.println("**********************************************\n");
-                System.out.println("Fix message generated.\n");
                 BrokerClient client = new BrokerClient();
 
                 try {

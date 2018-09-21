@@ -44,6 +44,8 @@ public class Broker {
                     instrument = "Platinum";
                     break;
                 }
+                else
+                    System.out.println("Error: Invalid Input. Try again.");
             }
 
         }catch (Exception ex){
