@@ -15,7 +15,6 @@ public class RoutingTable {
     public RoutingTable(String id, SocketChannel channel){
         this.id = id;
         this.channel = channel;
+
     }
-
-
 }

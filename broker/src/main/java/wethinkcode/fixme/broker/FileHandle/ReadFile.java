@@ -50,11 +50,10 @@ public class ReadFile {
 
 
 	public static void updateFile(String instrument, String filename){
-		try{	
+		try{
 			String[] items = ReadLine(filename);
 			String deleteLine = null;
-			String newLine = null;
-			File file = new File("assets.txt");
+			File file = new File(filename);
 			FileWriter fWriter = new FileWriter(file);
 
 			for (String line : items){
@@ -64,9 +63,10 @@ public class ReadFile {
 
 			for (String line : items) {
 				if (line.equals(deleteLine))
-					fWriter.write(newLine + "\n");
+					fWriter.write(instrument);
 				else
-					fWriter.write(line + "\n");
+					fWriter.write(line);
+				fWriter.write("\n");
 			}
 			fWriter.close();
 		}

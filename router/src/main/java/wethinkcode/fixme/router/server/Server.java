@@ -25,6 +25,7 @@ public class Server {
     private InetSocketAddress listenAddress;
 //    private final int port;
     private ByteBuffer buffer;
+    private Socket socket;
     private ServerSocketChannel serverChannel;
     private Calendar cal = Calendar.getInstance();
     private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -81,7 +82,7 @@ public class Server {
                     this.read(key, routingTables);
 //                if (key.isValid() && key.isWritable())
 //                    this.useSocketToWrite();
-//                    this.writeToClient(key, "Message accepted by Router");
+//                    this.writeToClient(key, "ValidFixMessage accepted by Router");
 //                    continue;
             }
         }
@@ -100,13 +101,16 @@ public class Server {
         ServerSocketChannel serverChannel = (ServerSocketChannel) key.channel();
         SocketChannel channel = serverChannel.accept();
         channel.configureBlocking(false);
-        Socket socket = channel.socket();
+        this.socket = channel.socket();
         SocketAddress remoteAddr = socket.getRemoteSocketAddress();
         System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Listen from port " + socket.getLocalPort());
-        String clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
+        String clientId;
+        if (socket.getLocalPort() == 5001)
+            clientId = "YayYay";
+        else
+            clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
         routingTables.add(new RoutingTable( clientId, channel));
         this.useSocketToWrite(channel, clientId);
-//        System.out.println("Client in router table: " + clientId);
     }
 
     /**
@@ -140,10 +144,14 @@ public class Server {
         SocketChannel marketChannel = validation(msg, routingTable);
         if (marketChannel == null) {
             //TODO: send back broker an error message
-//            System.out.println("Need to send the client an error message");
-        } else {
+            System.out.println(sdf.format(cal.getTime()) + " [SERVER]: There is currently no Market connected");
+        }
+        else {
             //TODO: send the market the message from the broker
-            System.out.println("valid message");
+            if (socket.getLocalPort() == 5000)
+                System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Valid message from Broker");
+            else if (socket.getLocalPort() == 5001)
+                System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Valid message from Market");
             this.useSocketToWrite(marketChannel, msg);
         }
 
@@ -152,7 +160,6 @@ public class Server {
     }
 
     private SocketChannel validation(String msg, List<RoutingTable> routingTable){
-        // Todo implement FixValidator
         MessageValidationHandler chain1 = new CheckSumValidator();
         MessageValidationHandler chain2 = new DestinationVerification(routingTable);
         MessageValidationHandler chain3 = new MessageForwarding();
@@ -162,8 +169,9 @@ public class Server {
 
         FixMessageValidator request = new FixMessageValidator(msg);
 
-        if (chain1.validateMessage(request))
+        if (chain1.validateMessage(request)){
             return ((DestinationVerification) chain2).getChannel();
+        }
         return null;
     }
 

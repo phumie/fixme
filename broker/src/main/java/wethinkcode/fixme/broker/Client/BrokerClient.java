@@ -2,6 +2,7 @@ package wethinkcode.fixme.broker.Client;
 
 import wethinkcode.fixme.broker.Broker;
 import wethinkcode.fixme.broker.BrokerPrint;
+import wethinkcode.fixme.broker.FileHandle.ReadFile;
 import wethinkcode.fixme.broker.FixMessage.FixMessageFactory;
 
 import java.io.BufferedReader;
@@ -26,9 +27,11 @@ public class BrokerClient {
     private InetSocketAddress hostAddress;
     private static SocketChannel client;
     private ByteBuffer buffer;
-    private  String messages;
+    private  String messages, returnMessage;
     private static String fixMessage;
     private BufferedReader bufferedReader;
+    private static boolean idFlag;
+    private boolean sentFlag;
     private static String clientID;
     private static String market;
     private static String instrument;
@@ -88,6 +91,7 @@ public class BrokerClient {
                 if (key.isReadable())
                 {
                     this.read();
+                    break;
                 }
 
                 if (key.isWritable())
@@ -100,37 +104,69 @@ public class BrokerClient {
     private void read () throws  Exception {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
-        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BrokerID -> " + messages);
-        clientID = messages;
-        client.register(selector, SelectionKey.OP_READ);
-//        System.out.println(fixMessage);
+
+        if (!idFlag) {
+            System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BrokerID -> " + messages);
+            clientID = messages;
+            idFlag = true;
+            client.register(selector, SelectionKey.OP_READ);
+        }
+        else{
+            System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Message from Market -> " + messages);
+            checkMarketMessage(messages);
+            client.register(selector, SelectionKey.OP_READ);
+//            returnMessage =
+        }
         buffer.clear();
         this.client.register(this.selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE );
     }
 
+    private void checkMarketMessage(String messages) {
+        String[] tags =  messages.split("\\|");
+
+        for (String item : tags){
+            if (item.equals("35=Executed")){
+                System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BUY EXECUTED");
+                String write = tags[6].split("=")[1] + " " + tags[8].split("=")[1];
+                ReadFile.updateFile(write, "assets.txt");
+                break;
+            }
+            else if (item.equals("35=Rejected")){
+                System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BUY REJECTED");
+                break;
+            }
+        }
+
+//
+    }
+
 
     public void writeToClient() throws Exception {
-        this.buffer = ByteBuffer.allocate(1024);
-        this.buffer.put(fixMessage.getBytes());
-        this.buffer.flip();
-        client.write(this.buffer);
-        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message Generated -> " + fixMessage);
-        this.buffer.clear();
-        this.client.register(this.selector, SelectionKey.OP_READ);
-        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message sent to Router for Market");
+        if (!sentFlag){
+            this.buffer = ByteBuffer.allocate(1024);
+            this.buffer.put(fixMessage.getBytes());
+            this.buffer.flip();
+            client.write(this.buffer);
+            System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message Generated -> " + fixMessage);
+            this.buffer.clear();
+            this.client.register(this.selector, SelectionKey.OP_READ);
+            System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message sent to Router for Market");
+            sentFlag = true;
+        }
+
     }
 
     private String checkSumCalculator(String message){
         String checkSum;
-        int total = 0;
         String checkSumMessage = message.replace('|', '\u0001');
         byte[] messageBytes = checkSumMessage.getBytes(StandardCharsets.US_ASCII);
+        int total = 0;
 
         for (int i = 0; i < message.length(); i++)
             total += messageBytes[i];
 
         int CalculatedChecksum = total % 256;
-        checkSum = Integer.toString(CalculatedChecksum );
+        checkSum = Integer.toString(CalculatedChecksum - 1) ;
 
         return checkSum;
     }

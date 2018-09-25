@@ -13,6 +13,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -27,7 +28,7 @@ public class Market {
     private InetSocketAddress hostAddress;
     private SocketChannel client;
     private ByteBuffer buffer;
-    private  String messages;
+    private  String messages, fixMessage;
     private BufferedReader bufferedReader;
     private boolean idFlag;
     private String clientID;
@@ -130,8 +131,10 @@ public class Market {
     private void read () throws  Exception {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
-
-        System.out.println(sdf.format(cal.getTime()) + " [MARKET]: MarketID -> "+ messages);
+        if (messages.equals("YayYay"))
+            System.out.println(sdf.format(cal.getTime()) + " [MARKET]: MarketID -> "+ messages);
+        else
+            System.out.println(sdf.format(cal.getTime()) + " [MARKET]: FixMessage from Broker -> "+ messages);
         if (!this.idFlag){
             this.clientID = messages;
             this.client.register(this.selector, SelectionKey.OP_READ);
@@ -139,10 +142,16 @@ public class Market {
         }
         else {
             //TODO: insert messages that will be sent back to the broker
-            if (this.processMessage(messages))
-                System.out.println("The buy is valid");
-            else
-                System.out.println("The buy is not valid");
+            if (this.processMessage(messages)) {
+                System.out.println(sdf.format(cal.getTime()) + " [MARKET]: Buy is valid");
+                fixMessage = fixMessageGenerator(true);
+                System.out.println(sdf.format(cal.getTime()) + " [MARKET]: Broker message: " + fixMessage);
+            }
+            else {
+                System.out.println(sdf.format(cal.getTime()) + " [MARKET]: Buy is not valid");
+                fixMessage = fixMessageGenerator(false);
+                System.out.println(sdf.format(cal.getTime()) + " [MARKET]: Broker message: " + fixMessage);
+            }
             this.client.register(this.selector, SelectionKey.OP_WRITE );
         }
         buffer.clear();
@@ -157,7 +166,7 @@ public class Market {
      */
 
     private boolean processMessage (String message) {
-        String []splitMessage = message.split("\\|");
+        String[] splitMessage = message.split("\\|");
         String instrument = splitMessage[6].split("=")[1];
         double quantity = Double.parseDouble(splitMessage[8].split("=")[1]);
         boolean quantityCheck = false;
@@ -170,6 +179,38 @@ public class Market {
         return quantityCheck;
     }
 
+    private String fixMessageGenerator(boolean check){
+        String[] tags =  messages.split("\\|");
+        String fixMessage = "";
+
+        if (check == true){
+            fixMessage = "YayYay|" + tags[1] + "|" + tags[2] + "|" + "35=Executed|" +
+                        "49=YayYay" + "|" + "56=" + tags[0] + "|" + tags[6] + "|" + "44=0|" + tags[8] + "|";
+            fixMessage = fixMessage + "10=" + checkSumCalculator(fixMessage);
+        }
+        else if (check == false){
+            fixMessage = "YayYay|" + tags[1] + "|" + tags[2] + "|" + "35=Rejected|" +
+                    "49=YayYay" + "|" + "56=" + tags[0] + "|" + tags[6] + "|" + "44=0|" + tags[8] + "|";
+            fixMessage = fixMessage + "10=" + checkSumCalculator(fixMessage);
+        }
+        return fixMessage;
+    }
+
+    private String checkSumCalculator(String message){
+        String checkSum;
+        String checkSumMessage = message.replace('|', '\u0001');
+        byte[] messageBytes = checkSumMessage.getBytes(StandardCharsets.US_ASCII);
+        int total = 0;
+
+        for (int i = 0; i < message.length(); i++)
+            total += messageBytes[i];
+
+        int CalculatedChecksum = total % 256;
+        checkSum = Integer.toString(CalculatedChecksum - 1) ;
+
+        return checkSum;
+    }
+
     /**
      *
      * Writes to the client via the buffer
@@ -178,15 +219,15 @@ public class Market {
      * @throws Exception thrown when fails to write to buffer
      */
 
-    private void writeToClient() throws Exception {
-//        messages = bufferedReader.readLine();
+    public void writeToClient() throws Exception {
         this.buffer = ByteBuffer.allocate(1024);
-        this.buffer.put(messages.getBytes());
+        this.buffer.put(fixMessage.getBytes());
         this.buffer.flip();
         client.write(this.buffer);
-//        System.out.println("Checking message: " + messages);
+//        System.out.println(sdf.format(cal.getTime()) + " [BROKER]: Fix Message Generated -> " + fixMessage);
         this.buffer.clear();
         this.client.register(this.selector, SelectionKey.OP_READ);
+        System.out.println(sdf.format(cal.getTime()) + " [Market]: Fix Message sent to Router for Broker");
     }
 
     private void stop() throws IOException {

@@ -27,18 +27,21 @@ public class DestinationVerification implements MessageValidationHandler {
     @Override
     public boolean validateMessage(FixMessageValidator validMessage) {
 
-        String market;
+        String route;
         boolean flag = false;
         String validFixMessage = validMessage.getMessage();
         String [] tags = validFixMessage.split("\\|");
-        market = tags[5].split("=")[1];
-
+        route = tags[5].split("=")[1];
+//        System.out.println("ChannelID: " + route);
         for (RoutingTable item : this.routingTables){
-            if (item.getId().equals(market)){
+            if (item.getId().equals(route)){
                 flag = true;
                 this.channel = item.getChannel();
+//                System.out.println("ChannelID: " + item.getId());
                 break;
             }
+//            else
+//                System.out.println("Not found");
         }
         if (!flag) {
             return false;

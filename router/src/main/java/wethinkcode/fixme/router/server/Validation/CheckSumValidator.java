@@ -30,7 +30,7 @@ public class CheckSumValidator implements MessageValidationHandler {
               return true;
        }
        else {
-           return false;
+            return false;
        }
     }
 
