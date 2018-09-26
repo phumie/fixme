@@ -1,7 +1,6 @@
 package wethinkcode.fixme.market;
 
 import lombok.Getter;
-import wethinkcode.fixme.market.utilities.HandleFile;
 import wethinkcode.fixme.market.utilities.WriteToFile;
 //import wethinkcode.fixme.market.utilities.MarketFactory;
 
@@ -45,9 +44,6 @@ public class Market {
         this.socketSetUp();
     }
 
-    /**
-     * Initializing the server
-     */
     private void socketSetUp () {
         try {
             this.selector = Selector.open();
@@ -70,13 +66,6 @@ public class Market {
             }
         }
     }
-
-    /**
-     * Checks through the keys for when the incoming key is
-     * Valid, Acceptable, Readable, Writable
-     *
-     * @throws Exception thrown due to a mishandling of the key
-     */
 
     public void startClient() throws Exception {
 
@@ -108,13 +97,6 @@ public class Market {
         }
     }
 
-    /**
-     * Takes in a key, processes it and establishes a connection
-     *
-     * @param key (SelectionKey)
-     * @return (boolean) connection has been established
-     * @throws Exception thrown when an error occurs while trying to establish connection
-     */
     private static boolean processConnect(SelectionKey key) throws Exception{
         SocketChannel channel = (SocketChannel) key.channel();
         while (channel.isConnectionPending()) {
@@ -123,15 +105,10 @@ public class Market {
         return true;
     }
 
-    /**
-     * Reads incoming message for processing
-     * @throws Exception thrown reading from for wrong
-     */
-
     private void read () throws  Exception {
         client.read(buffer);
         messages = new String(buffer.array()).trim();
-        if (messages.equals("YayYay"))
+        if (messages.equals("M00001"))
             System.out.println(sdf.format(cal.getTime()) + " [MARKET]: MarketID -> "+ messages);
         else
             System.out.println(sdf.format(cal.getTime()) + " [MARKET]: FixMessage from Broker -> "+ messages);
@@ -141,7 +118,6 @@ public class Market {
             this.idFlag = true;
         }
         else {
-            //TODO: insert messages that will be sent back to the broker
             if (this.processMessage(messages)) {
                 System.out.println(sdf.format(cal.getTime()) + " [MARKET]: Buy is valid");
                 fixMessage = fixMessageGenerator(true);
@@ -157,24 +133,28 @@ public class Market {
         buffer.clear();
     }
 
-    /**
-     * checks whether the market has sufficient commodities available
-     * for the buyers request.
-     *
-     * @param message (String) to be processed
-     * @return (boolean) determined by the result of the process
-     */
-
     private boolean processMessage (String message) {
         String[] splitMessage = message.split("\\|");
         String instrument = splitMessage[6].split("=")[1];
+        int buysell = Integer.parseInt(splitMessage[3].split("=")[1]);
         double quantity = Double.parseDouble(splitMessage[8].split("=")[1]);
+        double price = Double.parseDouble(splitMessage[7].split("=")[1]);
         boolean quantityCheck = false;
-        //TODO: create a sell task as well
-        for (Commodity commodity: this.commodities) {
-            if (!commodity.getName().equals(instrument))
-                continue;
-            quantityCheck = commodity.buyCommodity(quantity);
+        if (buysell == 1){
+            for (Commodity commodity: this.commodities) {
+                if (!commodity.getName().equals(instrument))
+                    continue;
+                quantityCheck = commodity.buyCommodity(instrument, quantity);
+                WriteToFile.updateFile(instrument, commodity.getTotalAmount(), 1, commodity.getPrice(), "source.txt");
+            }
+        }
+        else if (buysell == 2){
+            for (Commodity commodity: this.commodities) {
+                if (!commodity.getName().equals(instrument))
+                    continue;
+                quantityCheck = commodity.sellCommodity(instrument, quantity, price);
+                WriteToFile.updateFile(instrument, commodity.getTotalAmount(), 2, commodity.getPrice(), "source.txt");
+            }
         }
         return quantityCheck;
     }

@@ -9,9 +9,6 @@ public class WriteToFile {
     public static File file = null;
     private static FileWriter fWriter;
 
-    public WriteToFile() {
-
-    }
 
     public static int getLinesCount(String filename){
         try{
@@ -51,25 +48,35 @@ public class WriteToFile {
     }
 
 
-    public static void updateFile(String instrument, String filename){
+    public static void updateFile(String instrument, double quantity, int buysell, double price, String filename){
         try{
-            String[] items = ReadLine(filename);
+            String[] data = ReadLine(filename);
+            String[] items = data[0].split(",");
             String deleteLine = null;
-            String newLine = null;
-            File file = new File("assets.txt");
+            String newLine = "";
+            double newQuantity = 0;
+            File file = new File(filename);
             FileWriter fWriter = new FileWriter(file);
 
             for (String line : items){
-                if (line.contains(instrument.split(" ")[0]))
+                if (line.contains(instrument.split(" ")[0])){
                     deleteLine = line;
+                    newQuantity = Double.parseDouble(line.split(" ")[1]);
+                }
             }
+
+            if (buysell == 1)
+                newQuantity = newQuantity - quantity;
+            else if (buysell == 2)
+                newQuantity = newQuantity + quantity;
 
             for (String line : items) {
                 if (line.equals(deleteLine))
-                    fWriter.write(newLine + "\n");
+                    newLine = instrument + " " + newQuantity + " " + price + "," + newLine;
                 else
-                    fWriter.write(line + "\n");
+                    newLine = line + "," + newLine;
             }
+            fWriter.write(newLine);
             fWriter.close();
         }
         catch (IOException ioe){

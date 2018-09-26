@@ -2,7 +2,7 @@ package wethinkcode.fixme.broker.FixMessage;
 
 public class FixMessageFactory {
 
-    public static String fixMessage(String brokerID, int buysell, String market, String instrument, double price, int quantity){
+    public static String fixMessage(String brokerID, int buysell, String market, String instrument, double price, double quantity){
 
         String fixMessage = brokerID + "|" + "8=fix.4.4|9=len|";
 

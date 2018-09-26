@@ -80,10 +80,6 @@ public class Server {
                     this.accept(key, routingTables);
                 if (key.isValid() && key.isReadable())
                     this.read(key, routingTables);
-//                if (key.isValid() && key.isWritable())
-//                    this.useSocketToWrite();
-//                    this.writeToClient(key, "ValidFixMessage accepted by Router");
-//                    continue;
             }
         }
     }
@@ -105,10 +101,7 @@ public class Server {
         SocketAddress remoteAddr = socket.getRemoteSocketAddress();
         System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Listen from port " + socket.getLocalPort());
         String clientId;
-        if (socket.getLocalPort() == 5001)
-            clientId = "YayYay";
-        else
-            clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
+        clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
         routingTables.add(new RoutingTable( clientId, channel));
         this.useSocketToWrite(channel, clientId);
     }
@@ -124,7 +117,6 @@ public class Server {
      */
 
     private void read(SelectionKey key, List<RoutingTable> routingTable) throws Exception {
-       //TODO: close the port correctly
         SocketChannel channel = (SocketChannel) key.channel();
         ByteBuffer buffer = ByteBuffer.allocate(1024);
         int numRead = -1;
@@ -143,11 +135,9 @@ public class Server {
         String msg = new String(data);
         SocketChannel marketChannel = validation(msg, routingTable);
         if (marketChannel == null) {
-            //TODO: send back broker an error message
             System.out.println(sdf.format(cal.getTime()) + " [SERVER]: There is currently no Market connected");
         }
         else {
-            //TODO: send the market the message from the broker
             if (socket.getLocalPort() == 5000)
                 System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Valid message from Broker");
             else if (socket.getLocalPort() == 5001)

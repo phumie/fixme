@@ -13,8 +13,6 @@ public class IDGenerator {
         return idGenerator;
     }
 
-    //todo: depending on the port number of the server, set the first digit from left either to B(broker) || M(market)
-
     public static String generateId(int port) {
 
         String indicator = null;

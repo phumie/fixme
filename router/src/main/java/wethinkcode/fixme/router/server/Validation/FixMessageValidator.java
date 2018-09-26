@@ -12,8 +12,6 @@ public class FixMessageValidator {
         tags = message.trim().split("\\|");
 
         if (tags[1].contains("8=") && tags[tags.length - 1].contains("10=")){
-
-            //Will Validate the message that is sent to the server
             this.message = message;
 
         }else {

@@ -36,7 +36,7 @@ public class BrokerClient {
     private static String market;
     private static String instrument;
     private static double price;
-    private static int quantity;
+    private static double quantity;
     private static int buysell;
     private static int flag;
     private static Calendar cal = Calendar.getInstance();
@@ -54,7 +54,6 @@ public class BrokerClient {
             this.bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             this.buffer = ByteBuffer.allocate(1024);
 
-            //TODO make sure to add whatever is bought to the wallet/assets
         }
         catch (IOException e) {
             System.out.println("Error: A problem occurred whilst initializing the client");
@@ -126,18 +125,23 @@ public class BrokerClient {
 
         for (String item : tags){
             if (item.equals("35=Executed")){
-                System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BUY EXECUTED");
-                String write = tags[6].split("=")[1] + " " + tags[8].split("=")[1];
-                ReadFile.updateFile(write, "assets.txt");
+                if (buysell == 1)
+                    System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BUY EXECUTED");
+                else if (buysell == 2)
+                    System.out.println(sdf.format(cal.getTime()) + " [BROKER]: SELL EXECUTED");
+                String a = tags[6].split("=")[1];
+                double b = Double.parseDouble(tags[8].split("=")[1]);
+                ReadFile.updateFile(a, b, buysell, "assets.txt");
                 break;
             }
             else if (item.equals("35=Rejected")){
-                System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BUY REJECTED");
+                if (buysell == 1)
+                    System.out.println(sdf.format(cal.getTime()) + " [BROKER]: BUY REJECTED");
+                else if (buysell == 2)
+                    System.out.println(sdf.format(cal.getTime()) + " [BROKER]: SELL REJECTED");
                 break;
             }
         }
-
-//
     }
 
 
@@ -185,20 +189,22 @@ public class BrokerClient {
     }
 
     public void fixMessageGen() throws Exception {
-        fixMessage = FixMessageFactory.fixMessage(clientID, buysell, market, instrument, price, quantity);
+        fixMessage = FixMessageFactory.fixMessage(clientID, buysell, market, instrument, price,  quantity);
         fixMessage = fixMessage + "10=" + checkSumCalculator(fixMessage);
         client.register(selector, SelectionKey.OP_READ);
     }
 
     public static void main(String[] args){
         BrokerPrint.buyOrSell();
-
         buysell = Broker.setBuyOrSell();
         if (buysell == 1){
+            BrokerPrint.clearScreen();
             BrokerPrint.startUpMessage();
             market = Broker.setMarket();
+            BrokerPrint.clearScreen();
             BrokerPrint.marketContentsMessage();
             instrument = Broker.setInstrument();
+            BrokerPrint.clearScreen();
             BrokerPrint.instrumentQuantity();
             quantity = Broker.setQuantity();
 
@@ -210,9 +216,21 @@ public class BrokerClient {
                 price = 1889.0 * quantity;
         }
         else if (buysell == 2){
+
+            BrokerPrint.clearScreen();
+            BrokerPrint.startUpMessage();
+            market = Broker.setMarket();
             BrokerPrint.showAssets();
+            instrument = Broker.setInstrument();
+            BrokerPrint.clearScreen();
+            BrokerPrint.instrumentQuantity();
+            quantity = Broker.sellQuantity(instrument);
+            BrokerPrint.clearScreen();
+            BrokerPrint.showMarketAssets();
+            price = Broker.sellPrice();
         }
-        System.out.println("\n\nYour purchase request sending as FIX message\n" +
+        System.out.println("\n\n********** WELCOME TO BROKER **********\n\n" +
+                "Your purchase/sell request sending as FIX message\n" +
                 "1. Continue purchase\n" +
                 "2. Quit purchasing\n\n");
 

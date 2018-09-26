@@ -20,7 +20,7 @@ public class Router {
         try {
             this.server = new Server();
             this.server.startServer(this.routingTable);
-            this.addToRoutingTable("000000", null);// why is this key null?
+            this.addToRoutingTable("000000", null);
 
         } catch (Exception e) {
             e.printStackTrace();

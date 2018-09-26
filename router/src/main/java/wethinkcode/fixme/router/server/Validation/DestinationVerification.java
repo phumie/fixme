@@ -32,16 +32,19 @@ public class DestinationVerification implements MessageValidationHandler {
         String validFixMessage = validMessage.getMessage();
         String [] tags = validFixMessage.split("\\|");
         route = tags[5].split("=")[1];
-//        System.out.println("ChannelID: " + route);
         for (RoutingTable item : this.routingTables){
+            if (route.equals("YayYay")){
+                route = item.getId();
+                if (route.contains("M"))
+                    this.channel = item.getChannel();
+                break;
+            }
             if (item.getId().equals(route)){
                 flag = true;
                 this.channel = item.getChannel();
-//                System.out.println("ChannelID: " + item.getId());
                 break;
             }
-//            else
-//                System.out.println("Not found");
+
         }
         if (!flag) {
             return false;
