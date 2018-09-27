@@ -101,7 +101,10 @@ public class Server {
         SocketAddress remoteAddr = socket.getRemoteSocketAddress();
         System.out.println(sdf.format(cal.getTime()) + " [SERVER]: Listen from port " + socket.getLocalPort());
         String clientId;
-        clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
+        if (socket.getLocalPort() == 5001)
+            clientId = "M00001";
+        else
+            clientId =  IDGenerator.getIdGenerator().generateId(socket.getLocalPort());
         routingTables.add(new RoutingTable( clientId, channel));
         this.useSocketToWrite(channel, clientId);
     }
@@ -182,20 +185,4 @@ public class Server {
         this.buffer.clear();
         channel.register(this.selector, SelectionKey.OP_READ);
     }
-
-    /**
-     * The server gets the socket from the key
-     *
-     * @param key
-     * @param message
-     * @throws IOException
-     */
-
-    public void writeToClient(SelectionKey key, String message) throws  Exception{
-
-        SocketChannel channel = (SocketChannel)key.channel();
-        this.useSocketToWrite(channel, message);
-    }
-
-
 }

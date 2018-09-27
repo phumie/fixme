@@ -144,16 +144,18 @@ public class Market {
             for (Commodity commodity: this.commodities) {
                 if (!commodity.getName().equals(instrument))
                     continue;
-                quantityCheck = commodity.buyCommodity(instrument, quantity);
-                WriteToFile.updateFile(instrument, commodity.getTotalAmount(), 1, commodity.getPrice(), "source.txt");
+                quantityCheck = commodity.buyCommodity(quantity);
+                System.out.println("commodity: " + commodity.getTotalAmount());
+                WriteToFile.updateFile(instrument, quantity, 1, commodity.getPrice(), "source.txt");
             }
         }
         else if (buysell == 2){
             for (Commodity commodity: this.commodities) {
                 if (!commodity.getName().equals(instrument))
                     continue;
-                quantityCheck = commodity.sellCommodity(instrument, quantity, price);
-                WriteToFile.updateFile(instrument, commodity.getTotalAmount(), 2, commodity.getPrice(), "source.txt");
+                quantityCheck = commodity.sellCommodity(quantity, price);
+                System.out.println("commodity: " + commodity.getTotalAmount());
+                WriteToFile.updateFile(instrument, quantity, 2, commodity.getPrice(), "source.txt");
             }
         }
         return quantityCheck;
@@ -218,7 +220,7 @@ public class Market {
     public static void main(String[] args) {
         Market market = new Market("YayYay ",
                 new Commodity("Gold", 78976.0, 1208.0),
-                new Commodity("Silver", 78565353.0, 909.0) ,
+                new Commodity("Silver", 78565.0, 909.0) ,
                 new Commodity("Platinum", 74763.0, 1889.0));
         try {
             market.startClient();

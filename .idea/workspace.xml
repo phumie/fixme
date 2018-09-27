@@ -2,42 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f3530b-25e8-479a-945c-6bed5af4fc68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/run_client.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_market.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_router.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_annotation_processor_6_0_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_annotation_processor_6_0_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/broker/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/.project" beforeDir="false" afterPath="$PROJECT_DIR$/broker/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/broker/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/broker/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/broker/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/broker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/broker/broker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/broker/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/broker/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Broker.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Broker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/BrokerPrint.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/BrokerPrint.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Client/BrokerClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/Client/BrokerClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/FixMessage/FixMessage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/broker/target/classes/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fix-me.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fix-me.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/market/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/.project" beforeDir="false" afterPath="$PROJECT_DIR$/market/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/market/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/market/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/market/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/market.iml" beforeDir="false" afterPath="$PROJECT_DIR$/market/market.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/HandleFile.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/Commodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/Commodity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/Market.class" beforeDir="false" afterPath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/Market.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/utilities/HandleFile.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/utilities/WriteToFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/market/target/classes/wethinkcode/fixme/market/utilities/WriteToFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/myServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/router/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/.project" beforeDir="false" afterPath="$PROJECT_DIR$/router/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/router/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/router/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/router/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/router/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/router.iml" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/RoutingTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/RoutingTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/IDGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/IDGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/DestinationVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/DestinationVerification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/FixMessageValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/FixMessageValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/MessageForwarding.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/MessageForwarding.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/MessageValidationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/MessageValidationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/myServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/routing/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/routing/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/routing/RoutingTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/routing/RoutingTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/IDGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/IDGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/CheckSumValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/CheckSumValidator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/DestinationVerification.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/DestinationVerification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/FixMessageValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/FixMessageValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/MessageForwarding.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/MessageForwarding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/MessageValidationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/server/Validation/MessageValidationHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/tests/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/classes/wethinkcode/fixme/router/tests/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/router/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_client.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_client.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_market.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_market.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_router.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_router.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/broker/target/" />
@@ -51,30 +95,104 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1788058861">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="22" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="22" />
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="152" />
+          <entry key="txt" value="32" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="152" />
+          <entry key="PLAIN_TEXT" value="32" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CheckSumValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java">
+      <file leaf-file-name="BrokerClient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+            <state relative-caret-position="104">
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
               <folding>
-                <element signature="e#298#299#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IDGenerator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/IDGenerator.java">
+      <file leaf-file-name="Market.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            <state relative-caret-position="474">
+              <caret line="227" selection-start-line="227" selection-end-line="227" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assets.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="source.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="65" selection-start-column="65" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -110,21 +228,21 @@
         <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/RoutingTable.java" />
         <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/Assets.java" />
-        <option value="$PROJECT_DIR$/assets.txt" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java" />
-        <option value="$PROJECT_DIR$/source.txt" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java" />
-        <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java" />
-        <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java" />
         <option value="$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java" />
-        <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java" />
         <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java" />
-        <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/DestinationVerification.java" />
         <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/FixMessageValidator.java" />
         <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/IDGenerator.java" />
+        <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java" />
+        <option value="$PROJECT_DIR$/source.txt" />
+        <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java" />
+        <option value="$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java" />
+        <option value="$PROJECT_DIR$/assets.txt" />
         <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java" />
+        <option value="$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/DestinationVerification.java" />
       </list>
     </option>
   </component>
@@ -144,8 +262,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="y" value="-4" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -153,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -163,15 +281,183 @@
               <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
               <item name="fix-me" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="FileHandle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="broker" type="462c0819:PsiDirectoryNode" />
+              <item name="FixMessage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="routing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fix-me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fix-me" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="Validation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537992828082" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -254,6 +540,9 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method>
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -262,7 +551,7 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -270,6 +559,9 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+      <method>
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -280,7 +572,7 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
@@ -292,6 +584,9 @@
       <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method>
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Router" />
@@ -341,6 +636,8 @@
       <workItem from="1537859230893" duration="21042000" />
       <workItem from="1537946472242" duration="15300000" />
       <workItem from="1537966067693" duration="515000" />
+      <workItem from="1537989881217" duration="10727000" />
+      <workItem from="1538033007922" duration="230000" />
     </task>
     <task id="LOCAL-00001" summary="Sell comodity function required">
       <created>1537368156255</created>
@@ -374,7 +671,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100035000" />
+    <option name="totallyTimeSpent" value="110992000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -389,63 +686,63 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32935324" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.29054725" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5019674" side_tool="true" weight="0.520398" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32998455" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4980326" weight="0.47462687" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32935324" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32935324" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26677316" />
-      <window_info anchor="right" id="Bean Validation" order="3" weight="0.32985657" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5019674" side_tool="true" weight="0.520398" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.32954547" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32935324" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4980326" visible="true" weight="0.35323384" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32935324" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2742279" />
+      <window_info anchor="right" id="Bean Validation" order="1" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32954547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.29054725" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42189056" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29067641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42189056" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Bean Validation" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32935324" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900497" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32976654" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.29054725" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.32998455" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -462,194 +759,37 @@
     <MESSAGE value="To do validation steps and router - market connection" />
     <option name="LAST_COMMIT_MESSAGE" value="To do validation steps and router - market connection" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="6" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/HandleFile.java">
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state relative-caret-position="2955">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/myServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java.orig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4420" />
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="492" column="30" selection-start-line="492" selection-start-column="30" selection-end-line="492" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/myServer.java" />
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java.orig" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/System.java" />
     <entry file="file://$PROJECT_DIR$/broker/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/nio/channels/SocketChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="466" column="24" selection-start-line="466" selection-start-column="24" selection-end-line="466" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="564" column="11" selection-start-line="564" selection-start-column="11" selection-end-line="564" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="111" column="7" selection-start-line="111" selection-start-column="7" selection-end-line="111" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/nio/channels/SocketChannel.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/String.java" />
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/tests/Client.java" />
     <entry file="file://$PROJECT_DIR$/WriteToFile.java" />
     <entry file="file://$PROJECT_DIR$/sources.txt" />
     <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/ValidFixMessage.java" />
     <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/Chain.java" />
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessage.java" />
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/Assets.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="295" column="43" selection-start-line="295" selection-start-column="43" selection-end-line="295" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class" />
     <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FileHandle/ReadFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="845">
           <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -660,13 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/HandleFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/HandleFile.java" />
     <entry file="file://$PROJECT_DIR$/run_router.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -674,84 +808,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347">
-          <caret line="149" column="9" lean-forward="true" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/RoutingTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/FixMessageValidator.java">
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state relative-caret-position="172">
+          <caret line="186" column="5" selection-start-line="186" selection-start-column="5" selection-end-line="186" selection-end-column="5" />
           <folding>
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/IDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,6 +843,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/FixMessageValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Broker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/BrokerPrint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/FixMessage/FixMessageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Commodity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/MessageForwarding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -770,10 +891,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/utilities/WriteToFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-188">
+          <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/DestinationVerification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+        <state relative-caret-position="26">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#517#518#0" expanded="true" />
@@ -786,8 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Validation/CheckSumValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="600">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
             <element signature="e#298#299#0" expanded="true" />
             <element signature="e#342#343#0" expanded="true" />
@@ -795,23 +923,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/source.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-617">
-          <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
+        <state>
+          <caret column="65" selection-start-column="65" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/routing/Router.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/src/main/java/wethinkcode/fixme/router/server/IDGenerator.java">
+    <entry file="file://$PROJECT_DIR$/market/src/main/java/wethinkcode/fixme/market/Market.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        <state relative-caret-position="474">
+          <caret line="227" selection-start-line="227" selection-end-line="227" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/broker/src/main/java/wethinkcode/fixme/broker/Client/BrokerClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
           <folding>
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

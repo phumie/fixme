@@ -1,1 +1,1 @@
-Platinum 560.0,Silver 251.0,Gold 202.0,
+Gold 0,Silver 0,Platinum 0,

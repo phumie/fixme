@@ -57,18 +57,20 @@ public class WriteToFile {
             double newQuantity = 0;
             File file = new File(filename);
             FileWriter fWriter = new FileWriter(file);
-
+//            System.out.println("quantity: " + quantity);
             for (String line : items){
                 if (line.contains(instrument.split(" ")[0])){
                     deleteLine = line;
                     newQuantity = Double.parseDouble(line.split(" ")[1]);
                 }
             }
+//            System.out.println("newQuantity 1: " + newQuantity);
 
             if (buysell == 1)
                 newQuantity = newQuantity - quantity;
             else if (buysell == 2)
                 newQuantity = newQuantity + quantity;
+//            System.out.println("newQuantity 2: " + newQuantity);
 
             for (String line : items) {
                 if (line.equals(deleteLine))
@@ -76,6 +78,7 @@ public class WriteToFile {
                 else
                     newLine = line + "," + newLine;
             }
+//            System.out.println("newline: " + newLine);
             fWriter.write(newLine);
             fWriter.close();
         }

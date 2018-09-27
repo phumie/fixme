@@ -15,7 +15,7 @@ public class Commodity {
         this.price =  price;
     }
 
-    public boolean buyCommodity (String instrument, double quantity){
+    public boolean buyCommodity (double quantity){
         this.totalAmount -= quantity;
         if (this.totalAmount <= 0){
             this.totalAmount += quantity;
@@ -24,7 +24,7 @@ public class Commodity {
             return true;
     }
 
-    public boolean sellCommodity (String instrument, double quantity, double price){
+    public boolean sellCommodity (double quantity, double price){
         double originalPrice = this.price * quantity;
         double sellPrice = price * quantity;
         if (originalPrice == sellPrice || originalPrice > sellPrice){
